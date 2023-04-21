@@ -11,17 +11,13 @@
 
 <br/>
 
-This is a solution template for creating a Single Page App (SPA) with Angular and ASP.NET Core following the principles of Clean Architecture. Create a new project based on this template by clicking the above **Use this template** button or by installing and running the associated NuGet package (see Getting Started for full details). 
-
-## Learn about Clean Architecture
-
-[![Clean Architecture with ASP.NET Core 3.0 • Jason Taylor • GOTO 2019](https://img.youtube.com/vi/dK4Yb6-LxAk/0.jpg)](https://www.youtube.com/watch?v=dK4Yb6-LxAk)
+This is a solution template for creating a Single Page App (SPA) with React and ASP.NET Core following the principles of Clean Architecture.
 
 ## Technologies
 
 * [ASP.NET Core 7](https://docs.microsoft.com/en-us/aspnet/core/introduction-to-aspnet-core)
 * [Entity Framework Core 7](https://docs.microsoft.com/en-us/ef/core/)
-* [Angular 14](https://angular.io/)
+* [React 18](https://react.dev/)
 * [MediatR](https://github.com/jbogard/MediatR)
 * [AutoMapper](https://automapper.org/)
 * [FluentValidation](https://fluentvalidation.net/)
@@ -36,7 +32,7 @@ The easiest way to get started is to install the [NuGet package](https://www.nug
 3. Run `dotnet new install Clean.Architecture.Solution.Template` to install the project template
 4. Create a folder for your solution and cd into it (the template will use it as project name)
 5. Run `dotnet new ca-sln` to create a new project
-6. Navigate to `src/WebUI` and launch the project using `dotnet run`
+6. Navigate to `src/WebAPIAndUI` and launch the project using `dotnet run`
 
 Check out my [blog post](https://jasontaylor.dev/clean-architecture-getting-started/) for more information.
 
@@ -81,9 +77,9 @@ This layer contains all application logic. It is dependent on the domain layer, 
 
 This layer contains classes for accessing external resources such as file systems, web services, smtp, and so on. These classes should be based on interfaces defined within the application layer.
 
-### WebUI
+### WebAPIAndUI
 
-This layer is a single page application based on Angular 14 and ASP.NET Core 7. This layer depends on both the Application and Infrastructure layers, however, the dependency on Infrastructure is only to support dependency injection. Therefore only *Startup.cs* should reference Infrastructure.
+This layer is a single page application based on React 18 and ASP.NET Core 7. This layer depends on both the Application and Infrastructure layers, however, the dependency on Infrastructure is only to support dependency injection. Therefore only *Startup.cs* should reference Infrastructure.
 
 ## Support
 
